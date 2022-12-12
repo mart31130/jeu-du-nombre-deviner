@@ -1,15 +1,16 @@
 /*************************************************/
-// Nom du projet: Jeu du nombre ‡ deviner
+// Nom du projet: Jeu du nombre √† deviner
 // Nom du fichier: MainJeuNombreAdeviner.cpp
 // Version : 1.0
 // Nom du programmeur: MP Pinaud
-// Date de crÈation : 25/11/2022
-// RÙle du fichier: Contient le code jeu
+// Date de cr√©ation : 25/11/2022
+// R√¥le du fichier: Contient le code jeu
 // Nom des composants utilises: JeuNombreADeviner.h
 //                              stdio.h
 // Historique du fichier:
 /*************************************************/
-
+// Nom du programmeur: Daignan Martin
+// modification: appel de la fonction jouerPartie et cr√©ation du boucle pour recommencer une nouvelle partie ansi que l'affichage des r√©sultats
 #include <stdio.h>
 #include "../include/JeuNombreADeviner.h"
 #include "../include/couleurs.h"
@@ -19,7 +20,7 @@ int main(void)
 
     printf ("%s\n", "Vous allez jouer pour deviner un nombre secret");
 
-    // Appeler la fonction tirerNombreMystere pour tirer alÈatoirement le nombre ‡ deviner
+    // Appeler la fonction tirerNombreMystere pour tirer al√©atoirement le nombre √† deviner
 int recommencerPartie = 1;
 int i = 0; // compteur du nombre de parties
 int gagne = 0;
@@ -28,7 +29,7 @@ float coup_moyen = 0; // initialisation du nombre d'essai moyen
 while(recommencerPartie == 1){ // boucle pour recommencer une partie
  int nb = tirerNombreMystere(0,10);
  int essai = jouerPartie(nb,0,10,4);
-// Afficher le rÈsultat de la partie
+// Afficher le r√©sultat de la partie
     if (essai==-1){
         printf("Vous avez depasser le nombre d'essai\n");
         printf("Vous avez perdu!\n");
@@ -47,14 +48,14 @@ i = i+1;
 printf("Voulez vous recommencer une nouvelle partie?(1/0)",recommencerPartie);
 scanf("%d",&recommencerPartie);
 printf("La partie commence.\n");
-printf("Vous avez 4 essais pour deviner le nombre mystÈre\x8Are compris entre 0 et 10\n");
+printf("Vous avez 4 essais pour deviner le nombre myst√©re\x8Are compris entre 0 et 10\n");
 
 if (recommencerPartie == 0){
 printf("vous avez jouer:%d partie(s)\n",i);
-printf("Vous avez gagnes:%d parties\n",gagnÈ);
+printf("Vous avez gagnes:%d parties\n",gagn√©);
 printf("Votre score est de :%d \n",score);
-coup_moyen =  (float) essai/i; //(float) permet de forcer le nombre d'essai en float (mÈthode cast). Et calcul du nombre d'essais moyens.
-printf("Votre nombre d'essais moyen est de:%.1f\n",coup_moyen); // affichage du nombre d'essai moyen: %.1f pour avoir 1 chiffres aprËs la virgule
+coup_moyen =  (float) essai/i; //(float) permet de forcer le nombre d'essai en float (m√©thode cast). Et calcul du nombre d'essais moyens.
+printf("Votre nombre d'essais moyen est de:%.1f\n",coup_moyen); // affichage du nombre d'essai moyen: %.1f pour avoir 1 chiffres apr√®s la virgule
 }
 
 
@@ -64,7 +65,7 @@ printf("Votre nombre d'essais moyen est de:%.1f\n",coup_moyen); // affichage du 
 
 
     // Appeler la fonction jouerPartie est compris entre 0 et 10
-    // Il ya 4 essais pour jouer et trouver le nombre mystËre tirÈ prÈcÈdemment
-    // Le nombre ‡ trous maximum possibles
+    // Il ya 4 essais pour jouer et trouver le nombre myst√®re tir√© pr√©c√©demment
+    // Le nombre √† trous maximum possibles
 
 }
