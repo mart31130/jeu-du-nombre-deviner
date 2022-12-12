@@ -1,15 +1,18 @@
 /*************************************************/
-// Nom du projet: Jeu du nombre à deviner
+// Nom du projet: Jeu du nombre Ã  deviner
 // Nom du fichier: JeuNombreADeviner.cpp
 // Version : 1.0
 // Nom du programmeur: MP Pinaud
-// Date de création : 25/11/2022
-// Rôle du fichier: Contient le code des fonctions du jeu
+// Date de crÃ©ation : 25/11/2022
+// RÃ´le du fichier: Contient le code des fonctions du jeu
 // Nom des composants utilises: JeuNombreADeviner.h
 //                              stdio
 //                              ctime, cstdlib
 // Historique du fichier:
 /*************************************************/
+// Nom du programmeur: Daignan Martin
+// modification: ajout du code de la fonction jouerPartie
+
 #include <stdio.h>
 #include <cstdlib>
 #include <ctime>
@@ -18,15 +21,15 @@
 
 
 // Nom :tirerNombreMystere
-// Rôle : Tire aléatoirement un nombre à deviner entre nbMin et nbMAx
-// Paramètres d'entrée: nbMin, nbMAx : limites du nombre à deviner
-// Valeur de retour : nombre à deviner
+// RÃ´le : Tire alÃ©atoirement un nombre Ã  deviner entre nbMin et nbMAx
+// ParamÃ¨tres d'entrÃ©e: nbMin, nbMAx : limites du nombre Ã  deviner
+// Valeur de retour : nombre Ã  deviner
 
 int tirerNombreMystere(int nbMin, int nbMax)
 {
     int nb = 0; // Nombre aleatoire
-    // Initialisation du générateur aléatoire avec l'heure
-    // pour obtenir une série de nombres differents à chaque execution
+    // Initialisation du gÃ©nÃ©rateur alÃ©atoire avec l'heure
+    // pour obtenir une sÃ©rie de nombres differents Ã  chaque execution
     srand((int)time(NULL));
     nb = rand()%(nbMax - nbMin+1) + nbMin; // compris entre nbMin et nbMax inclus
     return nb;
@@ -34,12 +37,12 @@ int tirerNombreMystere(int nbMin, int nbMax)
 
 
 // Nom :jouerPartie
-// Rôle : Fait jouer une partie à un joueur
-// Paramètres d'entrée: le nombre à deviner,
-//                      les limites min et max du nombre à deviner,
+// RÃ´le : Fait jouer une partie Ã  un joueur
+// ParamÃ¨tres d'entrÃ©e: le nombre Ã  deviner,
+//                      les limites min et max du nombre Ã  deviner,
 //                      le nombre maximal d'essais possibles
 // Valeur de retour :   si la partie est perdue, la valeur de retour est -1
-//                      si la partie est gagnée, la valeur de retour est le nombre d'essais utilisés pour trouver le nombre
+//                      si la partie est gagnÃ©e, la valeur de retour est le nombre d'essais utilisÃ©s pour trouver le nombre
 
 // Ajouter le CODE de  la fonction
 
